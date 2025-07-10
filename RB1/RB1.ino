@@ -1,10 +1,10 @@
 #include <PestoLink-Receive.h>
 #include <Alfredo_NoU3.h>
 
-NoU_Motor frontLeftMotor(1);
-NoU_Motor frontRightMotor(2);
-NoU_Motor rearLeftMotor(7);
-NoU_Motor rearRightMotor(8);
+NoU_Motor frontLeftMotor(2);
+NoU_Motor frontRightMotor(1);
+NoU_Motor rearLeftMotor(8);
+NoU_Motor rearRightMotor(7);
 
 NoU_Drivetrain drivetrain(&frontLeftMotor, &frontRightMotor, &rearLeftMotor, &rearRightMotor);
 
