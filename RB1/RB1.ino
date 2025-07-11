@@ -23,7 +23,7 @@ void setup() {
     NoU3.calibrateIMUs();
 
     frontLeftMotor.setInverted(true);
-    rearLeftMotor.setInverted(true);
+    rearLeftMotor.setInverted(true);    
 }
 
 unsigned long lastPrintTime = 0;
@@ -60,4 +60,5 @@ void loop() {
         NoU3.setServiceLight(LIGHT_DISABLED);
         drivetrain.holonomicDrive(0, 0, 0); // stop motors if connection is lost
     }
+    PestoLink.update();
 }
