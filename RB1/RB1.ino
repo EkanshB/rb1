@@ -45,12 +45,8 @@ void loop() {
         // Get robot heading (in radians) from the gyro
         float heading = NoU3.yaw * angular_scale;
 
-        // Rotate joystick vector to be robot-centric
-        float cosA = cos(heading);
-        float sinA = sin(heading);
-
-        float robotPowerX = fieldPowerX * cosA + fieldPowerY * sinA;
-        float robotPowerY = -fieldPowerX * sinA + fieldPowerY * cosA;
+        float robotPowerX = fieldPowerX + fieldPowerY;
+        float robotPowerY = -fieldPowerX + fieldPowerY;
 
         //set motor power
         drivetrain.holonomicDrive(robotPowerX, robotPowerY, rotationPower);
